@@ -29,19 +29,14 @@ for li in ul:
                 continue
             if "summaryView" in tr["class"]:
                 continue
-            # place
             place = tr.select_one(".local").get_text()
-            # title
             title = tr.select_one(".title > a > .company").get_text()
-            # time
             time = tr.select_one(".data").get_text()
-            # pay
             pay = (
                 tr.select_one(".pay span.payIcon").get_text()
                 + " "
                 + tr.select_one(".pay span.number").get_text()
             )
-            # date
             date = tr.select_one(".regDate").get_text()
             save_obj = {
                 "place": place,
