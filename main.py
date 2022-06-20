@@ -1,8 +1,6 @@
-import os
 import csv
 import requests
 from bs4 import BeautifulSoup
-import pprint
 
 alba_url = "http://www.alba.co.kr"
 
@@ -54,3 +52,4 @@ for li in ul:
             }
             writer = csv.writer(file)
             writer.writerow(list(save_obj.values()))
+print("Scraping is over.")
